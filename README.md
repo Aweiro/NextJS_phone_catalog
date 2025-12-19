@@ -1,76 +1,108 @@
-# React + TypeScript + Vite
+# Phone Catalog (Next.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack phone catalog application built with **Next.js**, **TypeScript**, and **PostgreSQL**.  
+The project showcases modern React and Next.js practices, server-side rendering, database integration, and scalable frontend architecture.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+https://phone-catalog-latest.onrender.com/cart?from=%2Ffavorites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS**
+- **SCSS / Sass**
+- **classnames**
 
-## Expanding the ESLint configuration
+### State Management
+- **Redux Toolkit**
+- **React Redux**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### UI & UX
+- **Swiper**
+- **React Slick / Slick Carousel**
+- **React Swipeable**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Backend / Server
+- **Next.js API Routes**
+- **Prisma ORM**
+- **PostgreSQL**
+- **bcryptjs** (password hashing)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Media & Assets
+- **Cloudinary** (image storage and optimization)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Database
+- **PostgreSQL**
+- **Prisma Client**
+- Database seeding via custom `seed.ts`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Tooling & Quality
+- **ESLint**
+- **Prettier**
+- **TypeScript ESLint**
+- **Husky** + **lint-staged**
+- **dotenv**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Deployment
+- **Vercel** (recommended)
+- **GitHub Pages** (static assets)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-``` my comments
-Vite + TypeScript + Redux + ESLint + Prettier
-```
+---
+
+## ✨ Features
+
+- Phone catalog with dynamic data
+- Server-side rendering (SSR) and static generation
+- Global state management with Redux Toolkit
+- Responsive UI with Tailwind CSS and SCSS
+- Image upload and optimization via Cloudinary
+- Admin styles built with a separate Tailwind config
+- Secure password hashing
+- Typed database access with Prisma
+- Pre-commit linting and formatting
+
+---
+
+## 📂 Project Structure
+
+src/
+├── app/                # Next.js App Router
+├── components/         # Reusable UI components
+├── store/              # Redux store & slices
+├── lib/                # Prisma & server utilities
+├── pages/prisma/       # Admin / Prisma-related pages
+├── styles/             # Global styles (SCSS, Tailwind)
+├── types/              # Shared TypeScript types
+└── utils/              # Helper functions
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js ≥ 18
+- PostgreSQL
+- npm / yarn / pnpm
+
+### Installation
+```bash
+git clone https://github.com/Aweiro/NextJS_phone_catalog.git
+cd NextJS_phone_catalog
+npm install
+npx prisma migrate dev
+npm run seed
+npm run dev
+
+🎯 Project Goal
+
+This project was built as a portfolio / CV project to demonstrate:
+	•	full-stack development with Next.js
+	•	relational database work with PostgreSQL
+	•	Prisma ORM and data modeling
+	•	modern UI development with Tailwind
+	•	scalable and maintainable project structure
