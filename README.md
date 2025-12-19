@@ -68,20 +68,6 @@ https://phone-catalog-latest.onrender.com/cart?from=%2Ffavorites
 
 ---
 
-## 📂 Project Structure
-
-src/
-├── app/                # Next.js App Router
-├── components/         # Reusable UI components
-├── store/              # Redux store & slices
-├── lib/                # Prisma & server utilities
-├── pages/prisma/       # Admin / Prisma-related pages
-├── styles/             # Global styles (SCSS, Tailwind)
-├── types/              # Shared TypeScript types
-└── utils/              # Helper functions
-
----
-
 ## 🛠️ Getting Started
 
 ### Prerequisites
